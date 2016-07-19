@@ -43,8 +43,30 @@ a{
     background: #7dcd40;    
     border-bottom: 5px solid #619E32;
 }
-.logo{
+.social-media{    
+    height: 20%;
+    width: 100%;    
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
+.social-media-icon{
+    background: #1c3643;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-media-icon:hover{
+    background: #fed136;
+    color: #333333;
 }
 .column-two{
     background: #EFEFEF;
