@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.column-one{
+    width: 30vw;
+    height: 100vh;
+    background-image: url(../images/sidenav.jpg);    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;    
+}
+.column-two{
+    background: #EFEFEF;
+}
