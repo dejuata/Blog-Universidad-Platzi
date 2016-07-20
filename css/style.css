@@ -87,7 +87,7 @@ a{
 }
 .newsletter{
     padding: 20px;    
-    background: rgba(216,31,22,0.8) url(../images/frontend.png) no-repeat right center;    
+    background: rgba(216,31,22,0.8) url(../images/frontend2.png) no-repeat right center;    
     overflow: hidden;
     border-radius: 5px;
     margin: 10px auto ;
@@ -116,4 +116,31 @@ a{
 }
 .clear{
     display: inline;
+}
+.nav{
+    border-bottom: 1px solid #515151;
+    display: flex;
+    align-items: center;
+}
+.nav ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.nav li{
+    padding: 0 25px 5px;    
+    cursor: pointer;
+}
+.nav li:hover{
+    box-shadow: 0 5px #7dcd40;
+}
+
+.nav li:last-child{
+    border-right: 0;
+}
+.nav li>*{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
 }
