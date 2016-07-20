@@ -178,3 +178,29 @@ a{
     align-items: center;
     color: #333333;
 }
+.cover{
+    background: url(../images/cup.jpg) no-repeat center;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    position: relative;
+}
+.cover-title{
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: #fff;    
+    background:  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.cover-title h1{
+    margin: 0;
+}
+.container-post{
+    width: 70%;
+    position: relative;
+    margin: 0 auto;
+}
