@@ -2,6 +2,7 @@ body{
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    color: #333333;
 }
 a{
     text-decoration: none;    
@@ -9,11 +10,9 @@ a{
 .column-one{
     width: 30vw;
     height: 100vh;
-    background-image: url(../images/sidenav.jpg);    
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: url(../images/sidenav.jpg) no-repeat center;     
     background-size: cover; 
-    position: relative;   
+    position: fixed;   
 }
 .colum-one-container{
     width: 100%;
@@ -64,10 +63,118 @@ a{
     justify-content: center;
     align-items: center;
 }
-.social-media-icon:hover{
+.social-media-icon:hover, .newsletter-btn:hover{
     background: #fed136;
     color: #333333;
 }
 .column-two{
+    position: absolute;
+    right: 0;
     background: #EFEFEF;
+    width: 70%;
+}
+.container{
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+}
+.header{
+    position: fixed;    
+    top: 0;
+    right: 0;
+    width: 70vw;
+    height: calc(100vh - 450px);    
+}
+.newsletter{
+    padding: 20px;    
+    background: rgba(216,31,22,0.8) url(../images/frontend2.png) no-repeat right center;    
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 10px auto ;
+    text-align: center;
+    color: #fff;
+}
+.newsletter-title{
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0 0 10px;
+}
+.newsletter-input{
+    padding: 10px;
+    font-size: 15px;    
+    border: none;
+    border-radius: 5px;
+}
+.newsletter-btn{
+    padding: 10px;
+    background-color: #333333;
+    color: #FFF;
+    font-weight: bold;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.clear{
+    display: inline;
+}
+.nav{
+    border-bottom: 1px solid #515151;
+    display: flex;
+    align-items: center;
+}
+.nav ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.nav li{
+    padding: 0 25px 5px;    
+    cursor: pointer;
+}
+.nav li:hover{
+    box-shadow: 0 5px #7dcd40;
+}
+
+.nav li:last-child{
+    border-right: 0;
+}
+.nav li>*{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+.super-post{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.post{
+    width: 300px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.post a{
+    color: #333333;
+}
+.post-title{
+    margin: 0;
+    padding: 10px 0;   
+}
+.author{
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #333333;
+}
+.author img{
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.author a{
+    display: flex;
+    margin: 0;
+    align-items: center;
+    color: #333333;
 }
