@@ -2,6 +2,7 @@ body{
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    color: #333333;
 }
 a{
     text-decoration: none;    
@@ -70,8 +71,7 @@ a{
     position: absolute;
     right: 0;
     background: #EFEFEF;
-    height: 100%;
-    width: 70vw;
+    width: 70%;
 }
 .container{
     width: 80%;
@@ -143,4 +143,161 @@ a{
     display: block;
     text-align: center;
     margin: 0 auto;
+}
+.super-post{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.post{
+    width: 300px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.post a{
+    color: #333333;
+}
+.post-title{
+    margin: 0;
+    padding: 10px 0;   
+}
+.author{
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #333333;
+}
+.author img, .post-author img{
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.author a{
+    display: flex;
+    margin: 0;
+    align-items: center;
+    color: #333333;
+}
+/*-------------------------------------/*
+ * Page post
+/*-------------------------------------*/
+.body-post{
+    background: #EFEFEF;
+}
+.cover{
+    background: url(../images/cup.jpg) no-repeat center;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    position: relative;
+}
+.cover-title{
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: #fff;    
+    background:  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.cover-title h1{
+    margin: 0;
+}
+.container-post{
+    width: 60%;
+    position: relative;
+    margin: 0 auto;
+}
+.letter-post{    
+    padding: 30px;    
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    background: #FFF;
+    text-align: justify;
+}
+.letter-post p:first-child{
+    letter-spacing: 0.01rem;
+    font-size: 18px;
+    line-height: 1.75em;   
+}
+.letter-post  p {    
+    line-height: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+.letter-post  a{
+    color: #ff4842; 
+    font-weight: bold;   
+}
+.letter-post  a:hover{
+    color: #d0272a;    
+}
+.letter-post h2{
+    padding-bottom: 5px;
+    border-bottom: 3px solid #7dcd40;
+}
+.letter-post li{
+    padding: 10px;
+}
+.post-author{
+    width: 90%;
+    border-top: 2px solid #f2f2f2;
+    padding: 50px 30px;  
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.post-author h4, .post-author p{
+    margin: 0; 
+}
+.post-author p{
+    font-size: 14px;
+}
+.post-author-description{
+    padding-right: 50px;
+    text-align: justify;
+}
+.post-calendar{
+    width: inherit;
+}
+.post-calendar i{
+    font-size: 18px;
+    padding-right: 10px;
+}
+.footer{
+    width: 100%;
+    height: 40vh;
+    background: #1c3643;
+    margin-top: 50px;
+}
+.footer .container-post{
+    height: inherit;
+    display: flex;
+}
+.footer-centrar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-platzi{
+    color: #FFF;
+    text-align: center;
+    width: 50%;
+    height: inherit;    
+}
+.footer-platzi h1, .footer-platzi p{
+    margin: 0;
+}
+.footer-social-media{
+    width: 50%;
+    height: inherit;    
+}
+.footer-social-media .social-media{
+    width: 100%;
+    position: relative;
+}
+.footer-icon{
+    background: #f2f2f2;
+    color: #1c3643;
 }
