@@ -264,3 +264,40 @@ a{
     font-size: 18px;
     padding-right: 10px;
 }
+.footer{
+    width: 100%;
+    height: 40vh;
+    background: #1c3643;
+    margin-top: 50px;
+}
+.footer .container-post{
+    height: inherit;
+    display: flex;
+}
+.footer-centrar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-platzi{
+    color: #FFF;
+    text-align: center;
+    width: 50%;
+    height: inherit;    
+}
+.footer-platzi h1, .footer-platzi p{
+    margin: 0;
+}
+.footer-social-media{
+    width: 50%;
+    height: inherit;    
+}
+.footer-social-media .social-media{
+    width: 100%;
+    position: relative;
+}
+.footer-icon{
+    background: #f2f2f2;
+    color: #1c3643;
+}
