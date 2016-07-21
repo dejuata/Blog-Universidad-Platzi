@@ -3,16 +3,21 @@ body{
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     color: #333333;
+    background: #EFEFEF;
 }
 a{
     text-decoration: none;    
 }
+/*-------------------------------------/*
+ * Column one left
+/*-------------------------------------*/
 .column-one{
     width: 30vw;
     height: 100vh;
     background: url(../images/sidenav.jpg) no-repeat center;     
     background-size: cover; 
-    position: fixed;   
+    position: fixed;
+    transition: .3s   
 }
 .colum-one-container{
     width: 100%;
@@ -42,6 +47,9 @@ a{
     background: #7dcd40;    
     border-bottom: 5px solid #619E32;
 }
+/*-------------------------------------/*
+ * Social media
+/*-------------------------------------*/
 .social-media{    
     height: 20%;
     width: 100%;    
@@ -67,11 +75,15 @@ a{
     background: #fed136;
     color: #333333;
 }
+/*-------------------------------------/*
+ * Column two right
+/*-------------------------------------*/
 .column-two{
     position: absolute;
     right: 0;
     background: #EFEFEF;
     width: 70%;
+    transition: .3s;
 }
 .container{
     width: 80%;
@@ -85,6 +97,9 @@ a{
     width: 70vw;
     height: calc(100vh - 450px);    
 }
+/*-------------------------------------/*
+ * Newsletter
+/*-------------------------------------*/
 .newsletter{
     padding: 20px;    
     background: rgba(216,31,22,0.8) url(../images/frontend2.png) no-repeat right center;    
@@ -117,6 +132,9 @@ a{
 .clear{
     display: inline;
 }
+/*-------------------------------------/*
+ * Navigation
+/*-------------------------------------*/
 .nav{
     border-bottom: 1px solid #515151;
     display: flex;
@@ -144,6 +162,13 @@ a{
     text-align: center;
     margin: 0 auto;
 }
+.burguer{
+    display: none;
+}
+
+/*-------------------------------------/*
+ * Area post
+/*-------------------------------------*/
 .super-post{
     display: flex;
     flex-wrap: wrap;
@@ -179,7 +204,161 @@ a{
     color: #333333;
 }
 /*-------------------------------------/*
- * Page post
+ * Media query index.html
+/*-------------------------------------*/
+@media screen and (max-width: 1310px){
+    .nav{
+        flex-direction: column;
+    }
+    .nav-form{
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 1130px){
+    .colum-one-container h1 {
+        font-size: 1.8rem;        
+    }
+    .super-post{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .column-one {
+        width: 100%;
+        height: 20vh;
+        background: #1c3643;        
+        position: fixed;
+        z-index: 1;
+        top: 0;
+    }
+    .colum-one-container{
+        height: inherit;
+        display: flex;
+        align-items: center;
+    }
+    .logo{
+        width: 80px;
+        height: 80px;
+        padding-left: 10px;
+    }
+    .description{
+        display: flex;
+        width: 60%;
+    }
+    .description h1{
+        font-size: 1.6rem;
+    }
+    .description p{
+        display: none;
+    }
+    .btn{
+        width: 30%;
+    }
+    .social-media{
+        position: relative;
+    }
+    .colum-one-container p{
+        margin: 0;
+    }
+    .column-two {
+        position: relative;
+        right: 0;
+        top: 20vh;
+        background: #EFEFEF;
+        width: 100%;
+    }
+    .super-post{
+        flex-direction: initial;
+    }
+}
+@media screen and (max-width: 800px) {
+    .colum-one-container a{
+        display: none;
+    }
+    .social-media{
+        display: none;
+    }
+    .nav{
+        margin: 0;  
+        background: #fff;       
+        width: 240px;           
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 2;
+        transition: .6s;
+    }
+    .nav ul{
+        display: block;
+        width: 100%;
+    }
+    .nav ul li{
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        margin-bottom: 10px;
+    }    
+    .nav img{
+        height: 50px;
+        width: 50px;
+        margin:0;
+    }
+    .nav-form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+    }
+    .nav-form .newsletter-input{
+        background: #ededee;
+    }
+    .nav-form .newsletter-btn, .newsletter-btn{
+        margin-top: 10px;
+        width: 100%;
+    }
+    .active{
+        left: 0;
+    }
+    .burguer{
+        font-size: 22px;
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .burguer-button{
+        margin-right: 30px;
+        cursor: pointer;
+    }
+    .super-post{
+        flex-direction: column;
+    }
+    /*Newsletter*/
+    #mc_embed_signup_scroll{
+        display: flex;
+        flex-direction: column;
+    }
+    .newsletter-input{
+        margin-bottom: 10px;
+    }    
+}
+@media screen and (max-width: 500px) {
+    .description h1 {
+        font-size: 1.2rem;
+    }
+    .newsletter-title{
+        font-size: 1rem;
+    }
+    .logo{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/*-------------------------------------/*
+ * Page post.html
 /*-------------------------------------*/
 .body-post{
     background: #EFEFEF;
@@ -239,6 +418,9 @@ a{
 .letter-post li{
     padding: 10px;
 }
+/*-------------------------------------/*
+ * post author
+/*-------------------------------------*/
 .post-author{
     width: 90%;
     border-top: 2px solid #f2f2f2;
@@ -264,6 +446,9 @@ a{
     font-size: 18px;
     padding-right: 10px;
 }
+/*-------------------------------------/*
+ * Footer
+/*-------------------------------------*/
 .footer{
     width: 100%;
     height: 40vh;
