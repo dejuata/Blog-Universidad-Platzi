@@ -179,6 +179,9 @@ a{
     font-size: 15px;
     margin-top: 20px;
 }
+.post-nav{
+    display: none;
+}
 .post a{
     color: #333333;
 }
@@ -203,8 +206,140 @@ a{
     align-items: center;
     color: #333333;
 }
+
+
 /*-------------------------------------/*
- * Media query index.html
+ * Page post.html
+/*-------------------------------------*/
+.body-post{
+    background: #EFEFEF;
+}
+.cover{
+    background: url(../images/cup.jpg) no-repeat center;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    position: relative;
+}
+.cover-title{
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: #fff;    
+    background:  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.cover-title h1{
+    margin: 0;
+}
+.container-post{
+    width: 70%;
+    position: relative;
+    margin: 0 auto;
+}
+.letter-post{    
+    padding: 30px;    
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    background: #FFF;
+    text-align: justify;
+}
+.letter-post p:first-child{
+    letter-spacing: 0.01rem;
+    font-size: 18px;
+    line-height: 1.75em;   
+}
+.letter-post  p {    
+    line-height: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+.letter-post  a{
+    color: #ff4842; 
+    font-weight: bold;   
+}
+.letter-post  a:hover{
+    color: #d0272a;    
+}
+.letter-post h2{
+    padding-bottom: 5px;
+    border-bottom: 3px solid #7dcd40;
+}
+.letter-post li{
+    padding: 10px;
+}
+/*-------------------------------------/*
+ * post author
+/*-------------------------------------*/
+.post-author{
+    width: 90%;
+    border-top: 2px solid #f2f2f2;
+    padding: 50px 0;  
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.post-author h4, .post-author p{
+    margin: 0; 
+}
+.post-author p{
+    font-size: 14px;
+}
+.post-author-description{
+    padding-right: 50px;
+    text-align: justify;
+}
+.post-calendar{
+    width: inherit;
+}
+.post-calendar i{
+    font-size: 18px;
+    padding-right: 10px;
+}
+/*-------------------------------------/*
+ * Footer
+/*-------------------------------------*/
+.footer{
+    width: 100%;
+    height: 40vh;
+    background: #1c3643;
+    margin-top: 50px;
+}
+.footer .container-post{
+    height: inherit;
+    display: flex;
+}
+.footer-centrar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-platzi{
+    color: #FFF;
+    text-align: center;
+    width: 50%;
+    height: inherit;    
+}
+.footer-platzi h1, .footer-platzi p{
+    margin: 0;
+}
+.footer-social-media{
+    width: 50%;
+    height: inherit;    
+}
+.footer-social-media .social-media{
+    width: 100%;
+    position: relative;
+}
+.footer-icon{
+    background: #f2f2f2;
+    color: #1c3643;
+}
+/*-------------------------------------/*
+ * Media query 
 /*-------------------------------------*/
 @media screen and (max-width: 1310px){
     .nav{
@@ -212,6 +347,10 @@ a{
     }
     .nav-form{
         margin-bottom: 20px;
+    }
+    /*post*/
+    .container-post{
+        width: 75%;
     }
 }
 @media screen and (max-width: 1130px){
@@ -221,6 +360,10 @@ a{
     .super-post{
         flex-direction: column;
         align-items: center;
+    }
+    /*post*/
+    .container-post{
+        width: 80%;
     }
 }
 @media screen and (max-width: 1000px) {
@@ -252,8 +395,8 @@ a{
     .description p{
         display: none;
     }
-    .btn{
-        width: 30%;
+    .btn{        
+        text-align: center;
     }
     .social-media{
         position: relative;
@@ -271,6 +414,11 @@ a{
     .super-post{
         flex-direction: initial;
     }
+     /*post*/
+    .container-post{
+        width: 85%;
+    }
+
 }
 @media screen and (max-width: 800px) {
     .colum-one-container a{
@@ -343,11 +491,48 @@ a{
     .newsletter-input{
         margin-bottom: 10px;
     }    
+     /*post*/
+    .container-post{
+        width: 95%;
+    }
+    .post-nav{
+        display: initial;
+    }    
+    .burguer-post{
+        width: 100%;
+        padding-top: 20px;
+        color: #fff;
+    }
+    .post-author{
+        display: block;
+    }
+    .post-author img{
+        margin: 0;
+    }
+    .post-author-description{
+        padding: 0;        
+    }
+    .post-author-description h4{
+        text-align: center;
+        padding: 10px 0;
+    }
+    .post-author p{
+        margin: 0 auto;
+        padding-top:20px; 
+    }
+    .footer-platzi .logo{
+        padding: 0;
+    }
+    .footer-social-media .social-media{
+        display: flex;
+    }
+
+
 }
 @media screen and (max-width: 500px) {
-    .description h1 {
+    .description h1{
         font-size: 1.2rem;
-    }
+    }    
     .newsletter-title{
         font-size: 1rem;
     }
@@ -355,134 +540,29 @@ a{
         width: 50px;
         height: 50px;
     }
-}
-
-/*-------------------------------------/*
- * Page post.html
-/*-------------------------------------*/
-.body-post{
-    background: #EFEFEF;
-}
-.cover{
-    background: url(../images/cup.jpg) no-repeat center;
-    background-size: cover;
-    height: 400px;
-    width: 100%;
-    position: relative;
-}
-.cover-title{
-    height: 80px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    color: #fff;    
-    background:  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-}
-.cover-title h1{
-    margin: 0;
-}
-.container-post{
-    width: 60%;
-    position: relative;
-    margin: 0 auto;
-}
-.letter-post{    
-    padding: 30px;    
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-    background: #FFF;
-    text-align: justify;
-}
-.letter-post p:first-child{
-    letter-spacing: 0.01rem;
-    font-size: 18px;
-    line-height: 1.75em;   
-}
-.letter-post  p {    
-    line-height: 1.6rem;
-    margin-bottom: 1.6rem;
-}
-.letter-post  a{
-    color: #ff4842; 
-    font-weight: bold;   
-}
-.letter-post  a:hover{
-    color: #d0272a;    
-}
-.letter-post h2{
-    padding-bottom: 5px;
-    border-bottom: 3px solid #7dcd40;
-}
-.letter-post li{
-    padding: 10px;
-}
-/*-------------------------------------/*
- * post author
-/*-------------------------------------*/
-.post-author{
-    width: 90%;
-    border-top: 2px solid #f2f2f2;
-    padding: 50px 30px;  
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-.post-author h4, .post-author p{
-    margin: 0; 
-}
-.post-author p{
-    font-size: 14px;
-}
-.post-author-description{
-    padding-right: 50px;
-    text-align: justify;
-}
-.post-calendar{
-    width: inherit;
-}
-.post-calendar i{
-    font-size: 18px;
-    padding-right: 10px;
-}
-/*-------------------------------------/*
- * Footer
-/*-------------------------------------*/
-.footer{
-    width: 100%;
-    height: 40vh;
-    background: #1c3643;
-    margin-top: 50px;
-}
-.footer .container-post{
-    height: inherit;
-    display: flex;
-}
-.footer-centrar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.footer-platzi{
-    color: #FFF;
-    text-align: center;
-    width: 50%;
-    height: inherit;    
-}
-.footer-platzi h1, .footer-platzi p{
-    margin: 0;
-}
-.footer-social-media{
-    width: 50%;
-    height: inherit;    
-}
-.footer-social-media .social-media{
-    width: 100%;
-    position: relative;
-}
-.footer-icon{
-    background: #f2f2f2;
-    color: #1c3643;
+    /*post*/
+    .container-post{
+        width: 99%;
+    }
+    .cover-title{
+        font-size: 0.7rem;
+    }
+    .footer{
+        height: auto;
+    }
+    .footer .container-post {        
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-platzi, .footer-social-media{
+        padding: 20px 0;
+        width: 80%;
+    }
+    .footer-platzi h1 {
+        font-size: 1.2rem
+    }
+    .footer-platzi p{
+        font-size: 0.8rem;
+    }
+     
 }
