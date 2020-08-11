@@ -13,3 +13,5 @@ Desarrollo del segundo reto del curso de git y github usando los Issues Manageme
   
 Todos los conocimientos necesarios para la realización de este proyecto los puedes adquirir en 
 [Platzi](https://platzi.com/) con su [Curso profesional de Git y GitHub](https://platzi.com/cursos/git-github/) , de la mano de [Mike Nieva](https://twitter.com/mikenieva) 
+
+[Demo](https://dejuata.github.io/Blog-Universidad-Platzi/)
